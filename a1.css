@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@100&display=swap');
+
+
+
+@media screen and (max-width:1980px){
+        body {
+        background : #4a4e69;
+        margin : 0px;
+        padding : 0;
+
+    }
+/* __________ Header ___________ */
+    .header{
+        display: block;
+        margin: 0px;
+        padding: 0px;
+        height: 100px;
+    }
+    .navBar{
+        position: relative;
+        background: #22223b;
+        height: 100%;
+    }
+    .logo{
+        display: inline-block;
+        font-family: 'Merriweather', serif;
+        font-size: 35px;
+    }
+    .first-word{
+        color : #e63946
+    }
+    .second-word{
+        color: #457b9d
+    }
+    .nav-btn{
+        display: inline-block;
+        opacity: 0;
+        z-index: -1;
+    }
+    .nav-li{
+        position: absolute;
+        right: 15px;
+        top: 40%;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    .li{
+        display: inline-block;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+    }
+    .li a:visited, .li a:link {
+        color: #a8dadc;
+        font-family: 'Roboto', sans-serif;
+        padding: 15px 20px;
+        border-radius: 50%;
+    }
+    .li a:hover{
+        background: #457b9d;
+        
+        color: white;
+    }
+
+
+    /* _____________FILTER BTTONS ____________ */
+    .filter{
+        display:flex;
+        align-items: center;
+        text-align: center;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        width : 100%;
+    }
+    .btn{
+        /* font-family: 'Roboto', sans-serif; */
+        color: #f2e9e4;
+        font-size: 20px;
+        border: 3px solid #f2e9e4;
+        border-radius: 1em;
+        background : #4a4e69;
+        padding: 15px 30px;
+        margin: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    .clicked-btn {
+        /* color: #c9ada7;
+        border-color: #c9ada7; */
+        background: #6d6875;
+    }
+
+    /* _________ PROJECTS __________ */
+    .project-display{
+        width: 100%;
+    }
+    .projects{
+        display: inline-block;
+        position: absolute;
+        left : 14px;
+    }
+    .project{
+        box-sizing: border-box;
+        /* border: 1px solid black; */
+        border-radius: 1em;
+        display: inline-block;
+        margin : 20px;
+        padding: 0;
+    }
+    .img{
+        border-radius: 1em;
+        height: 250px;
+        width: 400px;
+        padding: 0;
+        margin : 0;
+        display: inline;
+        
+    }
+    .img:hover  {
+        transition: transform .2s;
+        transform: scale(1.07);
+    }
+    .name {
+        font-size: 21px ;
+        color: crimson;
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .description{
+        color: white;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* ________ LOADER __________  */
+    .loading {
+        justify-content: center;
+        position: absolute;
+        left : 400px;
+    }
+    
+}
+
+@media screen and (max-width:375px){
+        /* __________ HEADER ___________ */
+    .header{
+        height: 70px;
+        transition: height 0.3s;
+    }
+    .logo{
+        font-size: 22px;
+    }
+    .nav-li{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s, opacity 0.1s;
+    }
+    .li{
+        display: block;
+        position: relative;
+        left : -180px;
+        margin: 10px 0px;
+    }
+    .li a:visited ,.li a:link {
+        font-size: 16px;
+        padding: 0px;
+        border-radius: 50%;
+    }
+    .li a:hover{
+        background: none;
+    }
+    .nav-btn{
+        font-size: 20px;
+        background: #22223b ;
+        border: 0;
+        margin-left: 200px;
+        opacity: 1;
+    }
+
+/* _______ FILTER BUTTONS ________  */
+    .filter-li{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .btn{
+        display: block;
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+
+/* __________ PROJECTS _________ */
+    .projects{
+        text-align: center;
+    }
+    .project{
+        display: inline-block;
+    }
+    .img{
+        height: 120px;
+        width: 200px;
+    }
+    .name{
+        font-size: 18px;
+    }
+    .description{
+        font-size: 16px;
+    }
+}
+
+
+
+@media screen and (max-width:280px){
+
+    /* __________ HEADER ___________ */
+    .header{
+        height: 70px;
+    }
+    .logo{
+        font-size: 22px;
+    }
+    .nav-li{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s, opacity 0.1s;
+    }
+    .li{
+        display: block;
+        position: relative;
+        left : -90px;
+        margin: 10px 0px;
+    }
+    .li a:visited ,.li a:link {
+        font-size: 16px;
+        padding: 0px;
+        border-radius: 50%;
+    }
+    .li a:hover{
+        background: none;
+    }
+    .nav-btn{
+        font-size: 20px;
+        background: #22223b ;
+        border: 0;
+        margin-left: 100px;
+        opacity: 1;
+    }
+
+/* _______ FILTER BUTTONS ________  */
+    .filter-li{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .btn{
+        display: block;
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+
+/* __________ PROJECTS _________ */
+    .projects{
+        display: inline-block;
+        justify-content: center;
+    }
+    .img{
+        width: 200px;
+    }
+    .name{
+        font-size: 18px;
+    }
+    .description{
+        font-size: 16px;
+    }
+}
+
+/* ___________ OTHERS ___________ */
+.hide{
+    display: none;
+}
+.nav-btn-on{
+    color:#a8dadc
+}
+.show{
+    visibility: visible;
+    opacity: 1;
+}
+

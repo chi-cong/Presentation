@@ -63,7 +63,7 @@ const addProject = (img, name, description, url, type) => {
     </div>`
     // description should be shorter than 58 letter
 };
-const pkm = addProject('./pictures/pokemon_logo.jpg', 'Pokemon team builder', `Build your pokemon team`, '/New project/pokemon/pokemonFirstPage.html', 'Vanila JS');
+const pkm = addProject('./pictures/pokemon_logo.jpg', 'Pokemon team builder', `Build your pokemon team`, 'https://inquisitive-crumble-e04e96.netlify.app', 'Vanila JS');
 const myProjects = addProject('./pictures/download.png', 'My projects', `This's also a mini project`, '/New project/FrontPage.html', 'Vanila JS');
 const myProjectsz = addProject('./pictures/download.png', 'My projects', `This also a mini project`, '/New project/FrontPage.html', 'React JS');
 

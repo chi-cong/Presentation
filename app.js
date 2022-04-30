@@ -8,16 +8,16 @@ window.addEventListener('DOMContentLoad', () => {
 
 
 // ****************** NAVIGATE BAR ITEMS *********************
-class NavItem{
+class NavItem {
     constructor(title, url) {
         this.title = title;
         this.url = url;
     }
     adding() {
-            this.add = document.querySelector('.nav-li');
-            this.add.innerHTML += `<li class = "li"><a href="${this.url}">${this.title}</a></li>`;
+        this.add = document.querySelector('.nav-li');
+        this.add.innerHTML += `<li class = "li"><a href="${this.url}">${this.title}</a></li>`;
     };
-    
+
 }
 const aboutMe = new NavItem(`About me`, `#`);
 aboutMe.adding();
@@ -53,19 +53,22 @@ const project_section = document.querySelector('.projects');
 const addProject = (img, name, description, url, type) => {
     project_list.push({
         'img': img, 'name': name, 'description': description, 'url': url,
-        'type' : type
+        'type': type
     });
     project_section.innerHTML +=
-    `<div class="project">
+        `<div class="project">
         <a href ="${url}"><img src="${img}" alt"pokemon logo" class="img"></img></a>
         <a href ="${url}" class= "name"><h3  >${name}</h3></a>
         <p class = "description">${description}</p> 
     </div>`
     // description should be shorter than 58 letter
 };
-const pkm = addProject('./pictures/pokemon_logo.jpg', 'Pokemon team builder', `Build your pokemon team`, 'https://inquisitive-crumble-e04e96.netlify.app', 'Vanila JS');
+const pkm = addProject('./pictures/pokemon_logo.jpg', 'Pokemon team builder', `Build your pokemon team`, '/New project/pokemon/pokemonFirstPage.html', 'Vanila JS');
 const myProjects = addProject('./pictures/download.png', 'My projects', `This's also a mini project`, '/New project/FrontPage.html', 'Vanila JS');
 const myProjectsz = addProject('./pictures/download.png', 'My projects', `This also a mini project`, '/New project/FrontPage.html', 'React JS');
+const myProjectsf = addProject('./pictures/download.png', 'My projects', `This also a mini project`, '/New project/FrontPage.html', 'React JS');
+const myProjectsg = addProject('./pictures/download.png', 'My projects', `This also a mini project`, '/New project/FrontPage.html', 'React JS');
+const myProjectsr = addProject('./pictures/download.png', 'My projects', `This also a mini project`, '/New project/FrontPage.html', 'React JS');
 
 
 // ***************** FILTER BUTTONS *********************
@@ -84,7 +87,7 @@ allFilter.forEach((item) => {
         allFilter.forEach((item) => item.classList.remove('clicked-btn'));
         item.classList.toggle('clicked-btn');
         project_section.innerHTML = '';
-        for (let i = 0; i < project_list.length; i++){
+        for (let i = 0; i < project_list.length; i++) {
             let temp = project_list[i];
             if (item.textContent === temp.type || item.textContent === 'All') {
                 project_section.innerHTML += `<div class="project">
@@ -92,7 +95,7 @@ allFilter.forEach((item) => {
                 <a href ="${temp.url}" class= "name"><h3  >${temp.name}</h3></a>
                 <p class = "description">${temp.description}</p>
                 </div>`
-                    }
+            }
         }
     })
 })

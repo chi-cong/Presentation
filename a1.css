@@ -3,42 +3,54 @@
 
 
 
-@media screen and (max-width:1980px){
-        body {
-        background : #4a4e69;
-        margin : 0px;
-        padding : 0;
+@media screen and (max-width:1980px) {
+    body {
+        background: #4a4e69;
+        margin: 0px;
+        padding: 0;
 
     }
-/* __________ Header ___________ */
-    .header{
+
+    /* __________ Header ___________ */
+    .header {
         display: block;
         margin: 0px;
         padding: 0px;
         height: 100px;
     }
-    .navBar{
+
+    .navBar {
         position: relative;
+        display: flex;
         background: #22223b;
         height: 100%;
+        justify-content: space-between;
     }
-    .logo{
+
+    .logo {
         display: inline-block;
         font-family: 'Merriweather', serif;
         font-size: 35px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 3%;
     }
-    .first-word{
-        color : #e63946
+
+    .first-word {
+        color: #e63946
     }
-    .second-word{
+
+    .second-word {
         color: #457b9d
     }
-    .nav-btn{
+
+    .nav-btn {
         display: inline-block;
         opacity: 0;
         z-index: -1;
     }
-    .nav-li{
+
+    .nav-li {
         position: absolute;
         right: 15px;
         top: 40%;
@@ -46,49 +58,60 @@
         margin: 0;
         padding: 0;
     }
+
     a {
         text-decoration: none;
     }
-    .li{
+
+    .li {
         display: inline-block;
         font-size: 18px;
         letter-spacing: 0.2px;
     }
-    .li a:visited, .li a:link {
+
+    .li a:visited,
+    .li a:link {
         color: #a8dadc;
         font-family: 'Roboto', sans-serif;
         padding: 15px 20px;
         border-radius: 50%;
     }
-    .li a:hover{
+
+    .li a:hover {
         background: #457b9d;
-        
+
         color: white;
     }
 
 
     /* _____________FILTER BTTONS ____________ */
-    .filter{
-        display:flex;
+    .filter {
+        display: flex;
         align-items: center;
-        text-align: center;
         display: inline-block;
         padding: 0;
         margin: 0;
-        width : 100%;
+        width: 100%;
     }
-    .btn{
+
+    .filter-li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
         /* font-family: 'Roboto', sans-serif; */
         color: #f2e9e4;
         font-size: 20px;
         border: 3px solid #f2e9e4;
         border-radius: 1em;
-        background : #4a4e69;
+        background: #4a4e69;
         padding: 15px 30px;
         margin: 5px;
         margin-top: 20px;
         cursor: pointer;
     }
+
     .clicked-btn {
         /* color: #c9ada7;
         border-color: #c9ada7; */
@@ -96,43 +119,55 @@
     }
 
     /* _________ PROJECTS __________ */
-    .project-display{
+    .project-display {
+        height: 85rem;
         width: 100%;
     }
-    .projects{
-        display: inline-block;
+
+    .projects {
+        height: 100%;
+        width: 100%;
+        display: grid;
         position: absolute;
-        left : 14px;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: auto auto;
+        justify-items: center;
+
     }
-    .project{
+
+    .project {
         box-sizing: border-box;
         /* border: 1px solid black; */
         border-radius: 1em;
         display: inline-block;
-        margin : 20px;
+        margin: 20px;
         padding: 0;
     }
-    .img{
+
+    .img {
         border-radius: 1em;
         height: 250px;
         width: 400px;
         padding: 0;
-        margin : 0;
+        margin: 0;
         display: inline;
-        
+
     }
-    .img:hover  {
+
+    .img:hover {
         transition: transform .2s;
         transform: scale(1.07);
     }
+
     .name {
-        font-size: 21px ;
+        font-size: 21px;
         color: crimson;
         display: block;
         margin-top: 20px;
         text-align: center;
     }
-    .description{
+
+    .description {
         color: white;
         text-align: center;
         justify-content: center;
@@ -142,153 +177,242 @@
     .loading {
         justify-content: center;
         position: absolute;
-        left : 400px;
+        left: 400px;
     }
-    
+
 }
 
-@media screen and (max-width:375px){
-        /* __________ HEADER ___________ */
-    .header{
-        height: 70px;
+@media screen and (max-width:1250px) {
+    .project-display {
+        width: 100%;
+    }
+
+    .project {
+        width: 280px;
+        height: 175px;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:912px) {
+    .projects {
+        height: 80%;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+
+    }
+}
+
+@media screen and (max-width:820px) {
+    .projects {
+        height: 90%;
+    }
+
+    .project {
+        width: 200px;
+        height: 125px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    /* __________ HEADER ___________ */
+    .header {
+        height: 100px;
         transition: height 0.3s;
     }
-    .logo{
-        font-size: 22px;
+
+    .nav-btn {
+        height: 28px;
+        font-size: 20px;
+        background: #22223b;
+        border: 0;
+        margin-right: 3%;
+        opacity: 1;
+        z-index: 999;
+        margin-top: 5%;
     }
-    .nav-li{
+
+    .nav-li {
+        display: flex;
+        flex-direction: column;
         visibility: hidden;
         opacity: 0;
         transition: visibility 0.3s, opacity 0.1s;
     }
-    .li{
+
+    .logo {
+        height: 28px;
+        font-size: 22px;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width:420px) {
+
+    /* __________ HEADER ___________ */
+    .header {
+        height: 70px;
+        transition: height 0.3s;
+    }
+
+
+
+    .nav-li {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s, opacity 0.1s;
+    }
+
+    .li {
         display: block;
         position: relative;
-        left : -180px;
+        left: -180px;
         margin: 10px 0px;
     }
-    .li a:visited ,.li a:link {
+
+    .li a:visited,
+    .li a:link {
         font-size: 16px;
         padding: 0px;
         border-radius: 50%;
     }
-    .li a:hover{
+
+    .li a:hover {
         background: none;
     }
-    .nav-btn{
-        font-size: 20px;
-        background: #22223b ;
-        border: 0;
-        margin-left: 200px;
-        opacity: 1;
-    }
 
-/* _______ FILTER BUTTONS ________  */
-    .filter-li{
+
+
+    /* _______ FILTER BUTTONS ________  */
+    .filter-li {
         display: flex;
         text-align: center;
         justify-content: center;
     }
-    .btn{
+
+    .btn {
         display: block;
         font-size: 15px;
         padding: 10px 15px;
     }
 
-/* __________ PROJECTS _________ */
-    .projects{
+    /* __________ PROJECTS _________ */
+    .projects {
+        height: 110rem;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto;
         text-align: center;
     }
-    .project{
+
+    .project {
         display: inline-block;
     }
-    .img{
+
+    .img {
         height: 120px;
         width: 200px;
     }
-    .name{
+
+    .name {
         font-size: 18px;
     }
-    .description{
+
+    .description {
         font-size: 16px;
     }
 }
 
 
 
-@media screen and (max-width:280px){
+@media screen and (max-width:280px) {
 
     /* __________ HEADER ___________ */
-    .header{
+
+    .header {
         height: 70px;
     }
-    .logo{
+
+    .logo {
         font-size: 22px;
     }
-    .nav-li{
+
+    .nav-li {
         visibility: hidden;
         opacity: 0;
         transition: visibility 0.3s, opacity 0.1s;
     }
-    .li{
+
+    .li {
         display: block;
         position: relative;
-        left : -90px;
+        left: -90px;
         margin: 10px 0px;
     }
-    .li a:visited ,.li a:link {
+
+    .li a:visited,
+    .li a:link {
         font-size: 16px;
         padding: 0px;
         border-radius: 50%;
     }
-    .li a:hover{
+
+    .li a:hover {
         background: none;
     }
-    .nav-btn{
+
+    .nav-btn {
         font-size: 20px;
-        background: #22223b ;
+        background: #22223b;
         border: 0;
         margin-left: 100px;
         opacity: 1;
     }
 
-/* _______ FILTER BUTTONS ________  */
-    .filter-li{
+    /* _______ FILTER BUTTONS ________  */
+    .filter-li {
         display: flex;
         text-align: center;
         justify-content: center;
     }
-    .btn{
+
+    .btn {
         display: block;
         font-size: 15px;
         padding: 10px 15px;
     }
 
-/* __________ PROJECTS _________ */
-    .projects{
-        display: inline-block;
-        justify-content: center;
-    }
-    .img{
+    /* __________ PROJECTS _________ */
+
+
+    .img {
         width: 200px;
     }
-    .name{
+
+    .name {
         font-size: 18px;
     }
-    .description{
+
+    .description {
         font-size: 16px;
     }
 }
 
 /* ___________ OTHERS ___________ */
-.hide{
+.hide {
     display: none;
 }
-.nav-btn-on{
-    color:#a8dadc
+
+.nav-btn-on {
+    color: #a8dadc
 }
-.show{
+
+.show {
     visibility: visible;
     opacity: 1;
 }
-
